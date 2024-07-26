@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'auth_app/style.css' %}" type="text/css">
+    <title>{% block title %}{%endblock%}</title>
+</head>
+<body>
+    <header>
+        <h1>OIDC Django</h1>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

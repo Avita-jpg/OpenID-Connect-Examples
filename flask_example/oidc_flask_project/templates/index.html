@@ -1,0 +1,20 @@
+{% extends "master.html" %}
+
+{% block content %}
+    {% if state=='loggedin' %}
+    <section>
+        <h2>Welcome back, {{email}}!</h2>
+    </section>
+    {% endif %}
+
+    <section>
+        <h2>Menu</h2>
+        <ul>
+            {% if state=='loggedin' %}
+            <li><a href="{{ url_for('provider_logout')}}">Log out</a></li>
+            {% else %}
+            <li><a href="{{ url_for('login') }}">Log in</a></li>
+            {% endif %}
+        </ul>
+    </section>
+{% endblock %}
