@@ -175,4 +175,9 @@ cython_debug/
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
 
+
 client_secrets.json
+<<<<<<< HEAD
+
+=======
+>>>>>>> 72cb66788a001ed6945563e2e1090ad040b3be5d
