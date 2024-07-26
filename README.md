@@ -6,9 +6,9 @@ Two examples of a web application using OpenID Connect to authorize and authenti
 # Branches
 **_main_**: OIDC Settings are loaded from environment variables (Django version) or from a json file (Flask version)
 
-**_django-dynamic-settings_** : OIDC Settings can be managed via Django administration panel **at runtime**  (using django-constance package). Users are assigned to Django groups based on their Keycloak roles. For compatibility with other OpenID Providers, see [How it works](https://gitlab.irit.fr/gis-neocampus/datalake/oidc_auth_examples/-/blob/django-dynamic-settings/README.md?ref_type=heads#assign-groups-to-users-based-on-keycloak-roles)
+**_django-dynamic-settings_** : OIDC Settings can be managed via Django administration panel **at runtime**  (using django-constance package) and are stored in the database. Users are assigned to Django groups based on their Keycloak roles. For compatibility with other OpenID Providers, see [How it works](https://gitlab.irit.fr/gis-neocampus/datalake/oidc_auth_examples/-/blob/django-dynamic-settings/README.md?ref_type=heads#assign-groups-to-users-based-on-keycloak-roles)
 
-**_flask-dynamic-settings_** : [Not finished]
+**_flask-dynamic-settings_** : OIDC Settings can be managed via an admin interface at runtime. Settings are stored in environment variables. **TODO**: manage access to the admin interface, assign permissions based on Keycloak roles.
 
 # Dependencies (Main branch)
 **Django example:** Depends on [mozilla-django-oidc](https://mozilla-django-oidc.readthedocs.io/en/stable/index.html)
