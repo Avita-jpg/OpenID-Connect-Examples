@@ -10,17 +10,6 @@ header {
     padding: 10px 0;
     text-align: center;
 }
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.admin-link {
-    position: absolute;
-    right: 20px;
-    color: white;
-}
 section {
     padding: 20px;
     max-width: 800px;
@@ -41,14 +30,4 @@ li {
 }
 a {
     color: #fba300;
-}
-#submitLink {
-    background: none;
-    border: none;
-    color: #fba300;
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: inherit;
-    padding: 0;
-    margin: 0;
 }

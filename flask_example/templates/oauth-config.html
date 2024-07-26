@@ -1,0 +1,44 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+<body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="alert alert-info" role="alert">
+    {% for message in messages %}
+        {{ message }}<br>
+    {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <div class="container">
+        <h2>Configuration OAuth</h2>
+        <form id="clientSecretsForm" action="{{ url_for('oauth-settings.config')}}" method="post">
+            <div class="form-group">
+                <label for="clientId">Client ID</label>
+                <input type="text" class="form-control" id="clientId" name="client_id" value="{{ settings.client_id }}" required>
+            </div>
+            <div class="form-group">
+                <label for="clientSecret">Client Secret</label>
+                <input type="text" class="form-control" id="clientSecret" name="client_secret" value="{{ settings.client_secret }}" required>
+            </div>
+            <div class="form-group">
+                <label for="issuer">Issuer</label>
+                <input type="text" class="form-control" id="issuer" name="issuer" value="{{ settings.issuer }}" required>
+            </div>
+            <div class="form-group">
+                <label for="Scopes">Scopes (space-separated)</label>
+                <input type="text" class="form-control" id="scopes" name="scopes" value="{{ settings.scopes }}" required>
+            </div>
+            <div class="form-group">
+                <label for="signing-algos">Signing Algorithms (space-separated)</label>
+                <input type="text" class="form-control" id="signingAlgos" name="signing_algos" value="{{ settings.signing_algos }}" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+{% endblock %}

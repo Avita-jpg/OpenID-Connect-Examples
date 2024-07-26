@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'auth_app/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="static/css/style.css" type="text/css">
     <title>{% block title %}{%endblock%}</title>
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <a class="admin-link" href="/admin">Admin</a>
-            <h1>OIDC and Django example!</h1>
-        </div>
+        <h1>OIDC Flask</h1>
     </header>
 
     {% block content %}

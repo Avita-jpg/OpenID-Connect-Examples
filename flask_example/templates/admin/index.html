@@ -1,0 +1,18 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="alert alert-info" role="alert">
+    {% for message in messages %}
+        {{ message }}<br>
+    {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <div class="container">
+        <h2> Welcome to the app's administration. Navigate through the top menu.</h2>
+        <a href="/" class="btn btn-primary" role="button">Go to main page</a>
+    </div>
+{% endblock %}

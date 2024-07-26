@@ -1,0 +1,20 @@
+{% extends "master.html" %}
+
+{% block content %}
+    {% if current_user.is_authenticated %}
+    <section>
+        <h2>Welcome back, {{ current_user.username }}!</h2>
+    </section>
+    {% endif %}    
+    <section>
+      <h2>Menu</h2>
+      <ul>
+          {% if current_user.is_authenticated %}
+          <li><a href="{{ url_for('provider_logout')}}">Log out</a></li>
+          {% else %}
+          <li><a href="{{ url_for('authorize') }}">Log in</a></li>
+          {% endif %}
+          <li><a href="{{ url_for('admin.index') }}">App administration</a></li>
+      </ul>
+    </section>
+{% endblock %}
