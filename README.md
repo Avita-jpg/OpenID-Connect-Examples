@@ -130,3 +130,13 @@ Then:
 ```shell
 python app.py
 ```
+
+# How it works
+
+To make OIDC configuration dynamic, the OpenID Connect protocol is implemented without using any Python package besides requests-oauthlib (OAuth 2.0 support). 
+
+This image explains how OpenID Connect authorization code flow works. 
+
+![Authorization code flow OIDC](https://digital.nhs.uk/binaries/content/gallery/website/services/nhs-identity/oidc-authorization-code-flow-detailed.png)
+
+Additionally, the class `OIDCSettings` defined in _settings.py_ was made to manage access to settings related to OIDC. These settings are loaded and stored in environment variables, with the help of the [python-dotenv](https://saurabh-kumar.com/python-dotenv/) package.
